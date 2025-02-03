@@ -59,7 +59,7 @@ export default function App() {
           <li>Humidity: {indicators.humidity}%</li>
           <li>Wind: {indicators.wind}km/h</li>
           <li>
-            <img src={indicators.image} alt="weather image" />
+            <img src={indicators.image} alt="weather type" />
           </li>
         </ul>
       </div>
