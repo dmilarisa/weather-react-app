@@ -3,8 +3,15 @@ import "./App.css";
 import axios from "axios";
 
 export default function App() {
-  const [city, setCity] = useState("");
-  const [indicators, setIndicators] = useState("");
+  const [city, setCity] = useState("City");
+  let defaultIndicators = {
+    temperature: 10,
+    description: "thunderstorm with light rain",
+    humidity: 78,
+    wind: 20,
+    image: `https://openweathermap.org/img/wn/11d@2x.png`,
+  };
+  const [indicators, setIndicators] = useState(defaultIndicators);
 
   function handleSearch(event) {
     event.preventDefault();
@@ -27,42 +34,36 @@ export default function App() {
     });
   }
 
-  if (indicators === "") {
-    return (
-      <div className="App">
-        <h1>Weather App</h1>
-        <form onSubmit={handleSearch}>
-          <input
-            type="text"
-            placeholder="Enter a city.."
-            onChange={updateValue}
-          />
-          <input type="submit" value="Search" />
-        </form>
+  return (
+    <div className="App">
+      <h1>Weather App</h1>
+      <form onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Enter a city.."
+          onChange={updateValue}
+        />
+        <input type="submit" value="Search" />
+      </form>
+      <ul>
+        <li>Temperature: {indicators.temperature}°C</li>
+        <li>Description: {indicators.description}</li>
+        <li>Humidity: {indicators.humidity}%</li>
+        <li>Wind: {indicators.wind}km/h</li>
+        <li>
+          <img src={indicators.image} alt="weather type" />
+        </li>
+      </ul>
+      <div>
+        <a
+          href="https://github.com/dmilarisa/weather-react-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open-sourse code
+        </a>
+        &nbsp; by Larysa Dmytrenko
       </div>
-    );
-  } else {
-    return (
-      <div className="App">
-        <h1>Weather App</h1>
-        <form onSubmit={handleSearch}>
-          <input
-            type="text"
-            placeholder="Enter a city.."
-            onChange={updateValue}
-          />
-          <input type="submit" value="Search" />
-        </form>
-        <ul>
-          <li>Temperature: {indicators.temperature}°C</li>
-          <li>Description: {indicators.description}</li>
-          <li>Humidity: {indicators.humidity}%</li>
-          <li>Wind: {indicators.wind}km/h</li>
-          <li>
-            <img src={indicators.image} alt="weather type" />
-          </li>
-        </ul>
-      </div>
-    );
-  }
+    </div>
+  );
 }
