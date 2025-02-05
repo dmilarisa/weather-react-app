@@ -36,33 +36,35 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Weather App</h1>
-      <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Enter a city.."
-          onChange={updateValue}
-        />
-        <input type="submit" value="Search" />
-      </form>
-      <ul>
-        <li>Temperature: {indicators.temperature}°C</li>
-        <li>Description: {indicators.description}</li>
-        <li>Humidity: {indicators.humidity}%</li>
-        <li>Wind: {indicators.wind}km/h</li>
-        <li>
-          <img src={indicators.image} alt="weather type" />
-        </li>
-      </ul>
-      <div>
-        <a
-          href="https://github.com/dmilarisa/weather-react-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open-sourse code
-        </a>
-        &nbsp; by Larysa Dmytrenko
+      <div className="container">
+        <h1>Weather App</h1>
+        <form onSubmit={handleSearch}>
+          <input
+            type="text"
+            placeholder="Enter a city.."
+            onChange={updateValue}
+          />
+          <input type="submit" value="Search" />
+        </form>
+        <ul>
+          <li>Temperature: {indicators.temperature}°C</li>
+          <li>Description: {indicators.description}</li>
+          <li>Humidity: {indicators.humidity}%</li>
+          <li>Wind: {indicators.wind}km/h</li>
+          <li>
+            <img src={indicators.image} alt="weather type" />
+          </li>
+        </ul>
+        <div>
+          <a
+            href="https://github.com/dmilarisa/weather-react-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open-sourse code
+          </a>
+          &nbsp; by Larysa Dmytrenko
+        </div>
       </div>
     </div>
   );
