@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Weather from "./Weather"
 import axios from "axios";
 
 export default function App() {
@@ -37,7 +38,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
+        <Weather />
+        {/* <h1>Weather App</h1>
         <form onSubmit={handleSearch}>
           <input
             type="text"
@@ -54,8 +56,8 @@ export default function App() {
           <li>
             <img src={indicators.image} alt="weather type" />
           </li>
-        </ul>
-        <div>
+        </ul> */}
+        <footer>
           <a
             href="https://github.com/dmilarisa/weather-react-app"
             target="_blank"
@@ -64,7 +66,7 @@ export default function App() {
             Open-sourse code
           </a>
           &nbsp; by Larysa Dmytrenko
-        </div>
+        </footer>
       </div>
     </div>
   );

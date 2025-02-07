@@ -1,14 +1,52 @@
 import React from "react";
-import axios from "axios";
+import "./Weather.css"
+// import axios from "axios";
 
-export default function Weather(props) {
+export default function Weather() {
+  return (
+    <div className="Weather">
+      <form>
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="Enter a city.."
+              className="form-control"
+              autoFocus="on"
+            />
+          </div>
+          <div className="col-3">
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-primary w-100"
+            />
+          </div>
+        </div>
+      </form>
 
-    function handleResponse(response) {
-      alert(`The weather in ${props.city} is ${response.data.main.temp}°C`);
-    }
-    let apiKey = "c358f38536c4808d14556c03c5e2d3e0";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-
-    axios.get(apiUrl).then(handleResponse);
-    return <h2>Hello from Weather</h2>
+      <h1>New York</h1>
+      <ul>
+        <li>Wednesday 07:00</li>
+        <li>Mostly Cloudy</li>
+      </ul>
+      <div className="row mt-3">
+        <div className="col-6">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="weather"
+          />
+          <span className="temperature">6</span>
+          <span className="unit">°С</span>
+        </div>
+        <div className="col-6">
+          <ul>
+            <li>Precipitation: 10%</li>
+            <li>Humidity: 78%</li>
+            <li>Wind: 13 km/h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 }
