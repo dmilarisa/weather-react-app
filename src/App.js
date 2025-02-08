@@ -38,7 +38,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="New York"/>
         {/* <h1>Weather App</h1>
         <form onSubmit={handleSearch}>
           <input
@@ -65,7 +65,10 @@ export default function App() {
           >
             Open-sourse code
           </a>
-          &nbsp; by Larysa Dmytrenko
+          &nbsp; by &nbsp;
+          <a href="" target="_blank" rel="noopener noreferrer">
+            Larysa Dmytrenko
+          </a>
         </footer>
       </div>
     </div>

@@ -3,12 +3,13 @@
   border-radius: 5px;
   padding: 16px;
   max-width: 600px;
+  background-color: lightcyan;
 }
 
 .Weather h1 {
   font-size: 24px;
   font-weight: 100;
-  margin: 20px 0 0 0;
+  margin: 20px 0 5px 0;
   line-height: 29px;
 }
 
@@ -18,10 +19,11 @@
 }
 
 .Weather li {
-  font-size: 16 px;
+  font-size: 16px;
   font-weight: 100;
-  line-height: 19px;
+  line-height: 20px;
   list-style: none;
+  padding-bottom: 5px;
 }
 
 .Weather .temperature {
@@ -40,11 +42,6 @@
     margin-left: 0;
     position: relative;
     top: -15px;
-    line-height: 64px;
-
-
 }
 
-.Weather .img {
-  line-height: 1;
-}
+
