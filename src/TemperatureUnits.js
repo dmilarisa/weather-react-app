@@ -22,7 +22,7 @@ export default function TemperatureUnits(props) {
         <span className="temperature">{temp}</span>
         <span className="unit">
           °С |{" "}
-          <a href="" onClick={showFahrenheit}>
+          <a href="#" onClick={showFahrenheit}>
             °F
           </a>
         </span>
@@ -34,7 +34,7 @@ export default function TemperatureUnits(props) {
         <span className="temperature">{temp}</span>
         <span className="unit">
           °F |{" "}
-          <a href="" onClick={showCelcius}>
+          <a href="#" onClick={showCelcius}>
             °C
           </a>
         </span>

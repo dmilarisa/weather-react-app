@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function (props) {
+export default function CustomisedDate(props) {
   console.log(props.currentDate)
   const daysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   let dayOfWeek = props.currentDate.getDay();
