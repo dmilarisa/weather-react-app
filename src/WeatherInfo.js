@@ -1,5 +1,7 @@
 import React from "react";
 import CustomisedDate from "./CustomisedDate";
+import "./WeatherInfo.css";
+import TemperatureUnits from "./TemperatureUnits";
 
 export default function WeatherInfo(props) {
   console.log(props.data);
@@ -14,9 +16,13 @@ export default function WeatherInfo(props) {
       </ul>
       <div className="row">
         <div className="col-6">
-          <img src={props.data.iconUrl} alt={props.data.description} className="float-left" />
-          <span className="temperature">{props.data.temperature}</span>
-          <span className="unit">°С</span>
+          <img
+            src={props.data.iconUrl}
+            alt={props.data.description}
+            className="float-left icon-weather"
+          />
+          <TemperatureUnits temper={props.data.temperature}
+          />
         </div>
         <div className="col-6">
           <ul>
